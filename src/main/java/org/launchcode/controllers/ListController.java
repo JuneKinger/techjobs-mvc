@@ -47,6 +47,7 @@ public class ListController {
             model.addAttribute("title", "All " + columnChoices.get(column) + " Values");
             model.addAttribute("column", column);
             model.addAttribute("items", items);
+
             return "list-column";
         }
 

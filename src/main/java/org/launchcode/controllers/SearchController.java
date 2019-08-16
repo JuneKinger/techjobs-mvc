@@ -18,6 +18,7 @@ public class SearchController {
 
     @RequestMapping(value = "")
     public String search(Model model) {
+        // ListController.columnChoices sends (All, position type, etc) to the view
         model.addAttribute("columns", ListController.columnChoices);
         return "search";
     }

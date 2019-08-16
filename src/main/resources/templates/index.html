@@ -10,6 +10,7 @@
         <p>View jobs by:</p>
         <ul>
             <li th:each="action : ${actions}">
+                <!-- goes to search or list, whatever is selected -->
                 <a th:href="@{'/' + ${action.key}}" th:text="${action.value}"></a>
             </li>
         </ul>
