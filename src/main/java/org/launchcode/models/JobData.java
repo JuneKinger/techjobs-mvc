@@ -56,8 +56,6 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
-        // Bonus mission; normal version returns allJobs
-        // june - allJobs has an arrayList{} with all jobs in it
         return new ArrayList<>(allJobs);
     }
 
@@ -72,7 +70,7 @@ public class JobData {
      * @param value Value of teh field to search for
      * @return List of all jobs matching the criteria
      */
-    // june TODO - display from ListController
+
     public static ArrayList<HashMap<String, String>> findByColumnAndValue(String column, String value) {
 
         // load data, if not already loaded
