@@ -20,7 +20,7 @@ public class SearchController {
     @RequestMapping(value = "")
     public String search(Model model) {
         // ListController creates the hashmap object columnChoices which has the above choices
-        // uses the ListController hashmap columnChoices to send ("All", "position type", etc)
+        // Uses the ListController hashmap columnChoices to send ("All", "position type", etc)
         // to the view via search.html Spring associates data sent through name "columns" in model.addAttribute
         // "columns" here = data ${columns} in search.html
         // After form input there, th:action="@{/search/results} sends control below to
