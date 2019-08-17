@@ -27,6 +27,7 @@
         </p>
 
         <p>
+        <hr/>
             <label for="searchTerm">Keyword:</label>
             <input type="text" name="searchTerm" id="searchTerm" />
         </p>
@@ -37,7 +38,16 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
-
+    <h2>
+        <p th:if="${jobs != null}" th:text="${jobs.size()} + ' Result(s)'"></p>
+    </h2>
+    <table th:each="job : ${jobs}">
+        <tr th:each="elem : ${job.entrySet()}">
+            <td th:text="${elem.getKey()}"></td>
+            <td th:text="${elem.getValue()}"></td>
+        </tr>
+        <hr />
+    </table>
 </div>
 
 </body>

@@ -9,8 +9,17 @@
 <div class="container body-content">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
-
+    <h2>
+    <p th:text="${jobs.size()} + ' Result(s)'"></p>
+    </h2>
     <!-- TODO #3 - Use the same list display from search.html -->
+    <table th:each="job : ${jobs}">
+        <tr th:each="elem : ${job.entrySet()}">
+            <td th:text="${elem.getKey()}"></td>
+            <td th:text="${elem.getValue()}"></td>
+        </tr>
+        <hr />
+    </table>
 
 </div>
 

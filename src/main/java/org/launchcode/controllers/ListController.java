@@ -35,10 +35,12 @@ public class ListController {
     }
 
     @RequestMapping(value = "values")
+    // displays actual data obtained from JobData
     public String listColumnValues(Model model, @RequestParam String column) {
 
         if (column.equals("all")) {
             ArrayList<HashMap<String, String>> jobs = JobData.findAll();
+            // june TODO - display all from JobData.java
             model.addAttribute("title", "All Jobs");
             model.addAttribute("jobs", jobs);
             return "list-jobs";

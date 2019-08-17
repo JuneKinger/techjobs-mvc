@@ -19,6 +19,7 @@ public class HomeController {
         actionChoices.put("list", "List");
         model.addAttribute("actions", actionChoices);
 
+        // tell Spring which template to render
         return "index";
     }
 

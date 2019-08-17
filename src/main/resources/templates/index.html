@@ -9,9 +9,13 @@
     <div class="container body-content">
         <p>View jobs by:</p>
         <ul>
+            <!-- ${actions} is from model.addAttribute from HomeController "List" or "Search"
+            action = key-value pair -->
             <li th:each="action : ${actions}">
-                <!-- goes to search or list, whatever is selected -->
+                <!-- redirected to value = "" in ListController or SearchController, whatever the
+                user inputed - whether "list" or "search" -->
                 <a th:href="@{'/' + ${action.key}}" th:text="${action.value}"></a>
+
             </li>
         </ul>
     </div>
