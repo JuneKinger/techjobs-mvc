@@ -41,7 +41,7 @@
     <h2>
         <p th:if="${jobs != null}" th:text="${jobs.size()} + ' Result(s)'"></p>
     </h2>
-    <table th:each="job : ${jobs}">
+    <table class="job-listing" th:each="job : ${jobs}">
         <tr th:each="elem : ${job.entrySet()}">
             <td th:text="${elem.getKey()}"></td>
             <td th:text="${elem.getValue()}"></td>
