@@ -12,7 +12,7 @@
     <h2>
     <p th:text="${jobs.size()} + ' Result(s)'"></p>
     </h2>
-    <!-- TODO #3 - Use the same list display from search.html -->
+    <!-- Use the same list display from search.html and capitalize fields-->
     <table class = "job-listing" th:each="job : ${jobs}">
         <tr th:each="elem : ${job.entrySet()}">
             <td th:text="${#strings.capitalizeWords(elem.getKey())}"></td>
