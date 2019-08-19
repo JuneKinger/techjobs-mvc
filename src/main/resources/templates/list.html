@@ -10,6 +10,8 @@
         <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
         <h2>View All</h2>
         <ul>
+            <!-- (column=${column.key}) with href tells Thymeleaf to dynamically generate query parameters
+             for our URL based on the key/value pairs specified-->
             <li th:each="column : ${columns}">
                 <a th:href="@{/list/values(column=${column.key})}" th:text="${column.value}"></a>
             </li>
